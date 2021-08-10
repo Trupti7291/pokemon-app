@@ -26,23 +26,24 @@
         type: 'grass'
     }
 ];
-function add(pokemon){
-    pokemonList.push(pokemonList);
-}
 
-function getAll(){
-    return pokemonList;
-}
+    function add(pokemon){
+     pokemonList.push(pokemonList);
+    }
 
-return {
-    add : add ,
-    getAll : getAll
-};
-})();
+    function getAll(){
+     return pokemonList;
+    }
 
-console.log(pokemonRepository.getAll());
-pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] });
-console.log(pokemonRepository.getAll());
+    return {
+        add : add ,
+        getAll : getAll
+    };
+    })();
+
+// console.log(pokemonRepository.getAll());
+ pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] });
+// console.log(pokemonRepository.getAll());
 
 
 Object.keys(pokemonRepository).forEach(function(property) {
