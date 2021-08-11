@@ -51,13 +51,7 @@ Object.keys(pokemonRepository).forEach(function(property) {
 });
     
 pokemonRepository.getAll().forEach(function(pokemon){
-    if (pokemon.height > 3.5 && pokemon.height < 4) {
-     // this will display the longest pokemon from the list above
-     console.log(`${pokemon.name} Height: ${pokemon.height}m - I\'m the Tallest/Longest Pokemon.`);
- }
- else {
-     console.log(`<p>${pokemon.name} Height: ${pokemon.height}m </p> `);
- }
+    pokemonRepository.addListItem(pokemon);
 });
 
 let result = pokemonRepository.getAll().filter(pokemon => pokemon.length > 4);
