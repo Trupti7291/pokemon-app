@@ -1,0 +1,19 @@
+.button-class {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #6b8e23;
+  color: white;
+  text-decoration: none;
+  padding: 16px 32px;
+  margin: 4px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.6s opacity;
+  transition-property: background-color;
+}
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #dc143c;
+}
