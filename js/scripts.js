@@ -1,4 +1,4 @@
- let pokemonRepository = (function (){
+let pokemonRepository = (function (){
     let pokemonList = [
     {
         name: 'Braviary',
@@ -27,6 +27,22 @@
     }
 ];
 
+function addListItem(pokemon){
+    let pokemonList = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+        button.addEventListener('click', function(event){
+            showDetails(pokemon);
+        })
+
+}
+function showDetails(pokemon){
+    console.log(pokemon);
+}
     function add(pokemon){
      pokemonList.push(pokemonList);
     }
@@ -37,27 +53,19 @@
 
     return {
         add : add ,
-        getAll : getAll
+        getAll : getAll,
+        addListItem : addListItem
     };
     })();
-
-// console.log(pokemonRepository.getAll());
- pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] });
-// console.log(pokemonRepository.getAll());
-
 
 Object.keys(pokemonRepository).forEach(function(property) {
   console.log(pokemonRepository[property]);
 });
-    
-pokemonRepository.getAll().forEach(function(pokemon){
-    if (pokemon.height > 3.5 && pokemon.height < 4) {
-     // this will display the longest pokemon from the list above
-     console.log(`${pokemon.name} Height: ${pokemon.height}m - I\'m the Tallest/Longest Pokemon.`);
- }
- else {
-     console.log(`<p>${pokemon.name} Height: ${pokemon.height}m </p> `);
- }
+
+     pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] });
+      // console.log(pokemonRepository.getAll());
+      pokemonRepository.getAll().forEach(function(pokemon){
+      pokemonRepository.addListItem(pokemon);
 });
 
 let result = pokemonRepository.getAll().filter(pokemon => pokemon.length > 4);
