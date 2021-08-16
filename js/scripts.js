@@ -76,7 +76,7 @@ function loadDetails(item) {
   return fetch(url).then(function (response) {
     return response.json();
   }).then(function (details) {
-    // Now we add the details to the item
+    
     item.imageUrl = details.sprites.front_default;
     item.height = details.height;
     item.types = details.types;
@@ -112,8 +112,8 @@ Object.keys(pokemonRepository).forEach(function(property) {
   console.log(pokemonRepository[property]);
 });
 
-    // pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] }); 
-      // console.log(pokemonRepository.getAll());
+    pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] }); 
+      console.log(pokemonRepository.getAll());
       pokemonRepository.loadList().then(function () {
         pokemonRepository.getAll().forEach(function (pokemon) {
           pokemonRepository.addListItem(pokemon);
