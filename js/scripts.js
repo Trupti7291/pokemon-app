@@ -101,13 +101,6 @@ return {
 };
 })();
 
-
-pokemonRepository.loadList().then(function () {
-pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.addListItem(pokemon);
-});
-});
-
 Object.keys(pokemonRepository).forEach(function(property) {
   console.log(pokemonRepository[property]);
 });
