@@ -7,13 +7,13 @@ body {
 }
 
 #searchBar {
-  margin-left: 1300px;
+  float: right;
 }
 
 ul {
   text-align: center;
   padding: 12px;
-  width: 800px;
+  width: 100%;
 }
 
 .btn-primary {
@@ -35,7 +35,6 @@ ul {
   width: 100%;
   height: 50px;
   cursor: pointer;
-  margin-left: 440px;
 }
 .btn-primary:hover {
   background-color: goldenrod;
@@ -46,4 +45,25 @@ ul {
 
 .group-list-item {
   text-align: center;
+}
+
+@media all and (max-width: 600px) {
+  .navbar {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  li {
+    display: inline;
+    text-align: center;
+  }
 }
