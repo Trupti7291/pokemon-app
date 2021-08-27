@@ -6,11 +6,10 @@ body {
   background-color: darksalmon;
 }
 
-.button-class {
+.pokemon-button {
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #6b8e23;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -22,15 +21,9 @@ body {
   transition-property: background-color;
 }
 
-button:hover {
+pokemon-button:hover {
   cursor: pointer;
   opacity: 0.8;
-  background-color: #dc143c;
-}
-
-.container {
-  display: grid;
-  justify-content: center;
 }
 
 ul {
@@ -51,4 +44,7 @@ ul {
   transition-property: background-color;
   transition-duration: 0.2s;
   margin-left: 5px;
+}
+.group-list-item {
+  text-align: center;
 }
