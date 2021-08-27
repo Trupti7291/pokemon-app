@@ -119,7 +119,6 @@ let pokemonRepository = (function (){
     let imageElementBack = $('<img class="modal-img" style="width:50%">');
     imageElementBack.attr('src', item.imageUrlBack);
     let heightElement = $('<p>' + 'Height : ' + item.height + '</p>');
-    let weightElement = $('<p>' + 'Weight : ' + item.weight + '</p>');
     let typesElement = $('<p>' + 'Types : ' + item.types + '</p>');
     
 
@@ -128,7 +127,6 @@ let pokemonRepository = (function (){
     modalBody.append(imageElementFront);
     modalBody.append(imageElementBack);
     modalBody.append(heightElement);
-    modalBody.append(weightElement);
     modalBody.append(typesElement);
     
   }
@@ -138,25 +136,25 @@ let pokemonRepository = (function (){
     modalContainer.classList.remove('is-visible');
   }
 
-    // TO CLOSE WINDOW OF MODAL
-    modalClose.addEventListener('click' , hideModal);
+    // // TO CLOSE WINDOW OF MODAL
+    // modalClose.addEventListener('click' , hideModal);
 
-    // WHEN ESC IS PRESSED TO CLOSE THE MODAL
-     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-        hideModal();  
-      }
-    });
+    // // WHEN ESC IS PRESSED TO CLOSE THE MODAL
+    //  window.addEventListener('keydown', (e) => {
+    //   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+    //     hideModal();  
+    //   }
+    // });
 
-    // WHEN OUTSIDE THE MODAL CLICKED
-    modalContainer.addEventListener('click', (e) => {
-      // Since this is also triggered when clicking INSIDE the modal
-      // We only want to close if the user clicks directly on the overlay
-      let target = e.target;
-        if (target === modalContainer) {
-          hideModal();
-        }
-      });
+    // // WHEN OUTSIDE THE MODAL CLICKED
+    // modalContainer.addEventListener('click', (e) => {
+    //   // Since this is also triggered when clicking INSIDE the modal
+    //   // We only want to close if the user clicks directly on the overlay
+    //   let target = e.target;
+    //     if (target === modalContainer) {
+    //       hideModal();
+    //     }
+    //   });
 
     return {
      add: add,
