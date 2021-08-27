@@ -3,14 +3,15 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   text-decoration: none;
-  background-color: darksalmon;
+  background-color: palevioletred;
 }
 
 .pokemon-button {
   border: none;
+  background-color: rgb(235, 214, 96);
   display: inline-block;
   font-family: inherit;
-  color: white;
+  color: rgb(194, 66, 109);
   text-decoration: none;
   text-align: center;
   padding: 16px 32px;
@@ -22,6 +23,7 @@ body {
 }
 
 pokemon-button:hover {
+  background-color: gold;
   cursor: pointer;
   opacity: 0.8;
 }
@@ -44,6 +46,10 @@ ul {
   transition-property: background-color;
   transition-duration: 0.2s;
   margin-left: 5px;
+}
+.btn-primary:hover {
+  background-color: goldenrod;
+  border-color: goldenrod;
 }
 .group-list-item {
   text-align: center;
