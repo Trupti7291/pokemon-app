@@ -1,32 +1,6 @@
 let pokemonRepository = (function (){
    
-  let pokemonList = [
-  // {
-  //     name: 'Braviary',
-  //     height: 1.5,
-  //     type: ['normal', 'flying']
-  // },
-  // {
-  //     name: 'Ho-oh',
-  //     height: 3.8,
-  //     type: ['flying', 'fairy', 'fire', 'grass']
-  // },
-  // {
-  //     name: 'Piplup',
-  //     height: 0.4,
-  //     type: ['water', 'ice']
-  // },
-  // {
-  //     name: 'Rapidash',
-  //     height: 1.7,
-  //     type: ['fire', 'ice']
-  // },
-  // {
-  //     name: 'Arbok',
-  //     height: 3.5,
-  //     type: 'grass'
-  // }
-  ];
+  let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let searchInput = document.querySelector("#searchBar");
   
@@ -109,7 +83,6 @@ let pokemonRepository = (function (){
     });
   }
 
-  // SHOW MODAL FUNCTION
   function showModal(item) {
     // modalContainer.classList.add('is-visible');
     let modalBody = $('.modal-body');
@@ -149,7 +122,6 @@ let pokemonRepository = (function (){
     });
   });
 
-  // HIDE MODAL
   function hideModal() {
     modalContainer.classList.remove('is-visible');
   }
@@ -166,17 +138,8 @@ let pokemonRepository = (function (){
 
 })();
 
-// pokemonRepository.add({ name: 'Moltres', height: 2, type: ['Fire','Flying'] }); 
-  // console.log(pokemonRepository.getAll());
   pokemonRepository.loadList().then(function () {
     pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
     });
 });
-
-Object.keys(pokemonRepository).forEach(function(property) {
-console.log(pokemonRepository[property]);
-});
-
-let result = pokemonRepository.getAll().filter(pokemon => pokemon.length > 4);
-  console.log(result);
