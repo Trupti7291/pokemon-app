@@ -16,3 +16,5 @@ Application enlists the names of Pokemon(1st Gen). CLicking individually over th
 
 - Loads data from an external API.
 - Displays the list of Pokémon from API once data is successfully loaded.
+
+(pokemon-App)[https://trupti7291.github.io/pokemon-app/]
